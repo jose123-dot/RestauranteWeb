@@ -18,6 +18,7 @@ apellido: {
 
 documento: {
     type: String,
+    unique: true,
     required: true
 },
 
