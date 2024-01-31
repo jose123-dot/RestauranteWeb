@@ -1,4 +1,6 @@
-const {Schema, Model} = require ('moongose');
+const mongoose = require ('mongoose');
+const Schema = mongoose.Schema;
+
 
 //modelo
 const clienteSchema = new Schema({
@@ -31,5 +33,7 @@ apodo: {
 
 }, { timestamps: true });
 
+ ;
+
 //exportar modelo
-module.exports = Model('cliente', clienteSchema);
+module.exports = mongoose.model('cliente', clienteSchema);

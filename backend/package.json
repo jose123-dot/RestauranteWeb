@@ -9,6 +9,7 @@
   "author": "JOSE MARIA SUERO CUEVAS",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.1",
     "express": "^4.18.2",
     "moongose": "^1.0.0"
   }
