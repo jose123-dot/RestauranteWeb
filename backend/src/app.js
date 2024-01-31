@@ -15,5 +15,3 @@ app.get('/', indexroutes);
 
 //servidor
 app.listen(process.env.PORT, ()=> console.log('servidor ejecutado'));
-
-//TODO: ARREGLAR LA VARIABLE DEL ENTORNO
