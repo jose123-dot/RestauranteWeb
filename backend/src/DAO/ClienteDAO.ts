@@ -1,12 +1,9 @@
 import { ICliente, ClienteModel } from "../Models/cliente";
 export class ClienteDAO {
-  //exportar modelo
-
   //guardar cliente
   async createCliente(data: ICliente) {
     try {
-      const newCliente = await ClienteModel.create(data);
-      return newCliente;
+      return await ClienteModel.create(data);
     } catch (error) {
       console.log(error);
     }
@@ -25,9 +22,6 @@ export class ClienteDAO {
   //update
   async updatePost(id: string, data: any) {
     try {
-      //pass the id of the object you want to update
-      //data is for the new body you are updating the old one with
-      //new:true, so the dats being returned, is the update one
       const cliente = await ClienteModel.findByIdAndUpdate({ _id: id }, data, {
         new: true,
       });
@@ -52,5 +46,3 @@ export class ClienteDAO {
     }
   }
 }
-
-export const clienteDAO = new ClienteDAO();
