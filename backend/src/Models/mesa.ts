@@ -5,7 +5,7 @@ export interface Imesa {
   ubicacion: string;
   empleado: Schema.Types.ObjectId;
 }
-
+//TODO: FALTA ARRRELGAR LE OCA A ORLANDO
 //modelo
 const mesaSchema = new Schema<Imesa>(
   {

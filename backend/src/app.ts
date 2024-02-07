@@ -2,7 +2,9 @@
 
 import express, { Request, Response } from "express";
 const app = express();
-import bodyparser from "body-parser";
+//import cors from "cors";
+
+//import router
 import indexRoutes from "./Router/indexRoutes";
 import clienteRoutes from "./Router/clienteRouter";
 
@@ -10,17 +12,18 @@ import dotenv from "dotenv";
 dotenv.config();
 
 //base de datos
-require("./database/database");
+import "./database/database";
 
 //midleware
-app.use(bodyparser.json());
+app.use(express.json());
+//app.use(cors());
+
+//port
 app.set("port", process.env.PORT || 3000);
 
 //routers
 app.use("/", indexRoutes);
 app.use("/api/cliente/", clienteRoutes);
-
-//base de datos
 
 //servidor
 app.listen(process.env.PORT, () => console.log("servidor ejecutado"));
